@@ -1,15 +1,16 @@
 import { Directive, ElementRef, Renderer, HostListener, Input } from '@angular/core';
 
 @Directive({
-    selector: '[text-marker]'
+    selector: '[appTextMarker]'
 })
 
-export class TextMarker {
-    @Input('text-marker') private color: string;
+export class TextMarkerDirective {
+    @Input() private color: string;
+
     constructor(
-        private element: ElementRef, 
+        private element: ElementRef,
         private renderer: Renderer
-    ) {}
+    ) { }
 
     @HostListener('mouseenter')
     onEnter() {

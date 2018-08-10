@@ -4,13 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { TextMarker } from './text-marker';
+import { TextMarkerDirective } from './text-marker';
 import { OnlyIf } from './only-if';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TextMarker, 
+    TextMarkerDirective, 
     OnlyIf
   ],
   imports: [
