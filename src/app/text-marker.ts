@@ -5,7 +5,7 @@ import { Directive, ElementRef, Renderer, HostListener, Input } from '@angular/c
 })
 
 export class TextMarkerDirective {
-    @Input() private color: string;
+    @Input() private appTextMarker: string;
 
     constructor(
         private element: ElementRef,
@@ -14,7 +14,7 @@ export class TextMarkerDirective {
 
     @HostListener('mouseenter')
     onEnter() {
-        this.applyStyle(this.color, true);
+        this.applyStyle(this.appTextMarker, true);
     }
 
     @HostListener('mouseleave')
